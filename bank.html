@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,58 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Bank</title>
 </head>
+
 <body>
-    <h1 class="text-5xl text-center mt-4 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-lime-400 to-cyan-600">Let's get some money</h1>
+
+    <header>
+        <h1
+            class="text-5xl text-center mt-4 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-lime-400 to-cyan-600">
+            Let's get some money
+        </h1>
+    </header>
+    <main>
+        <section class="mt-8 w-3/4 mx-auto">
+            <div class="grid   grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="bg-purple-500 p-12 rounded-lg">
+                    <h3 class="font-semibold text-3xl text-white">Deposit</h3>
+                    <h3 class="text-4xl text-white">$<span id="deposit-total">00</span></h3>
+                </div>
+                <div class="bg-lime-500 p-12 rounded-lg">
+                    <h3 class="text-3xl font-semibold text-white">Withdraw</h3>
+                    <h3 class="text-4xl text-white">$<span id="withdraw-total">00</span></h3>
+                </div>
+                <div class="bg-red-500 p-12 rounded-lg">
+                    <h3 class="text-3xl font-semibold text-white">Total Ballance</h3>
+                    <h3 class="text-4xl text-white">$<span id="balance-total">1200</span></h3>
+                </div>
+            </div>
+        </section>
+        <!-- deposit and withdraw  -->
+        <section class="mt-12  w-3/4 mx-auto ">
+            <div class="grid grid-cols-1     lg:grid-cols-2 gap-8">
+                <div class="bg-green-400 p-8 rounded-lg">
+                    <h3 class="text-3xl text-white mb-2">Please Deposit</h3>
+                    <input id="deposit-field" class=" w-full border-gray-300 rounded-md py-1 px-2" type="number" name=""
+                        id="" placeholder="$Deposit Money" required>
+                    <br>
+                    <p id="positive-amount" class=" hidden text-red-500">please provide positive amount</p>
+                    <button id="deposit-button"
+                        class="bg-purple-400 py-2 px-4 text-white rounded-lg mt-6">Deposit</button>
+                </div>
+                <div class="bg-blue-400 p-8 rounded-lg">
+                    <h3 class="text-3xl text-white mb-2">Please withdraw</h3>
+                    <input id="withdraw-field" class="w-full mx-auto border-gray-300 rounded-md py-1 px-2" type="number"
+                        name="" id="" placeholder="$Deposit Money" required>
+                    <br>
+                    <p id="positive-amount-withdraw" class=" hidden text-red-500">please provide positive amount</p>
+                    <p id="balance-not-enough" class=" hidden text-red-500">not enough balance</p>
+                    <button id="withdraw-button"
+                        class="bg-purple-400 py-2 px-4 text-white rounded-lg mt-6">Withdraw</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./deposit.js"></script>
 </body>
+
 </html>
